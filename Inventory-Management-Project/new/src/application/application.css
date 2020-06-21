@@ -1,0 +1,74 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#root{
+	-fx-background-image : url("bckg.jpg");
+	-fx-background-repeat : stretch;
+	-fx-background-size : 1300 800;
+}
+
+.button {
+    -fx-background-color:  #0000ff,
+        linear-gradient(#000080 0%, #0000ff 20%, #0000ff 100%),
+        linear-gradient(#0000ff, #0000ff),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-padding: 10 20 10 20;
+}
+
+
+.button:hover {
+	-fx-background-color: #ffefd5,
+	linear-gradient( #f0ffff 0%, #ffefd5 20%, rgba(0,0,0,0)),
+        linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+	 -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: #000080;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(#000080, #0000ff);
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-padding: 10 20 10 20;
+}
+
+.button Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+			
+.text-field {
+	-fx-background-color: dimgrey   ,linear-gradient(to bottom, derive(dimgrey  ,60%) 5%,derive(dimgrey  ,90%));
+}		
+
+.text-field:focused {
+    -fx-background-color: #a9a9a9 , white , white;
+    -fx-border-color: #0000ff;
+    
+    
+}
+
+#user_name {
+   -fx-font-size: 22px;
+   -fx-font-family: "Impact";
+   -fx-fill: #0000cd;
+   -fx-text-fill: #000080;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+
+}
+
+#pass_word {
+	-fx-font-size: 22px;
+   -fx-font-family: "Impact";
+   -fx-fill: #0000cd;
+   -fx-text-fill: #000080;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+	
+}
+
+

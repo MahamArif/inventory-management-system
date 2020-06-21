@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Hbox1" prefHeight="675.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BankRecordController">
+   <children>
+      <Label layoutX="372.0" layoutY="44.0" text="BANK RECORD">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="Hbox" layoutX="3.0" layoutY="489.0" prefHeight="182.0" prefWidth="865.0">
+         <children>
+            <TextField fx:id="bank_invoice" layoutX="14.0" layoutY="30.0" prefHeight="31.0" prefWidth="286.0" promptText="Invoice #" />
+            <TextField fx:id="bank_cheque" layoutX="313.0" layoutY="30.0" prefHeight="31.0" prefWidth="145.0" promptText="Cheque #" />
+            <TextField fx:id="bank_partyname" layoutX="468.0" layoutY="30.0" prefHeight="31.0" prefWidth="202.0" promptText="Party Name" />
+            <TextField fx:id="bank_amount" layoutX="686.0" layoutY="30.0" prefHeight="31.0" prefWidth="157.0" promptText="Total amount" />
+            <TextField fx:id="bank_received" layoutX="14.0" layoutY="86.0" promptText="Received" />
+            <Button layoutX="486.0" layoutY="92.0" mnemonicParsing="false" onAction="#addBank" prefHeight="39.0" prefWidth="109.0" text="Add" />
+            <Button layoutX="732.0" layoutY="91.0" mnemonicParsing="false" onAction="#clearAll" prefHeight="39.0" prefWidth="109.0" text="Clear All" />
+            <Button layoutX="605.0" layoutY="92.0" mnemonicParsing="false" onAction="#deleteBank" prefHeight="39.0" prefWidth="116.0" text="Delete" />
+            <DatePicker fx:id="dateBank" layoutX="215.0" layoutY="86.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="bank" layoutX="4.0" layoutY="124.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="324.0" prefWidth="897.0">
+         <columns>
+            <TableColumn fx:id="date_rec" prefWidth="114.0" text="Date" />
+            <TableColumn fx:id="invoiceNo_b" prefWidth="96.0" text="Invoice #" />
+            <TableColumn fx:id="chequeNo_b" prefWidth="98.0" text="Cheque #" />
+            <TableColumn fx:id="partyName_b" prefWidth="129.0" text="Party Name" />
+            <TableColumn fx:id="totalAmount_b" prefWidth="162.0" text="Total Amount" />
+            <TableColumn fx:id="received_b" minWidth="0.0" prefWidth="144.0" text="Received Amount" />
+            <TableColumn fx:id="remaining_b" prefWidth="152.0" text="Remaining Dues" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

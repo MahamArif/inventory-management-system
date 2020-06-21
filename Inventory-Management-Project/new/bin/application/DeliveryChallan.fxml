@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Challan_print" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DeliveryChallanController">
+   <children>
+      <Label alignment="CENTER" layoutX="701.0" layoutY="38.0" prefHeight="42.0" prefWidth="200.0" text="DELIVERY CHALLAN" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="addTable" layoutX="18.0" layoutY="468.0" prefHeight="182.0" prefWidth="865.0">
+         <children>
+            <TextField fx:id="SNo" layoutX="14.0" layoutY="32.0" prefHeight="32.0" prefWidth="115.0" promptText="SNO" />
+            <TextField fx:id="QtyDelivered" layoutX="14.0" layoutY="92.0" prefHeight="32.0" prefWidth="166.0" promptText="QtyDelivered" />
+            <TextField fx:id="Description" layoutX="155.0" layoutY="32.0" prefHeight="32.0" prefWidth="235.0" promptText="Description" />
+            <TextField fx:id="PartyName" layoutX="702.0" layoutY="32.0" prefHeight="32.0" prefWidth="149.0" promptText="PartyName" />
+            <TextField fx:id="QtyDemanded" layoutX="532.0" layoutY="32.0" prefHeight="32.0" prefWidth="149.0" promptText="QtyDemanded" />
+            <TextField fx:id="PartNo" layoutX="414.0" layoutY="32.0" prefHeight="32.0" prefWidth="92.0" promptText="PartNo" />
+            <Button fx:id="print_btn" layoutX="740.0" layoutY="102.0" mnemonicParsing="false" onAction="#print_challan" prefHeight="42.0" prefWidth="99.0" text="PRINT" />
+            <Button fx:id="add_btn" layoutX="468.0" layoutY="102.0" mnemonicParsing="false" onAction="#saveChallan" prefHeight="42.0" prefWidth="99.0" text="ADD" />
+            <Button fx:id="clr_btn" layoutX="607.0" layoutY="103.0" mnemonicParsing="false" onAction="#deleteChallan" prefHeight="42.0" prefWidth="99.0" text="DELETE" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="challan" layoutX="2.0" layoutY="164.0" prefHeight="324.0" prefWidth="897.0">
+        <columns>
+          <TableColumn fx:id="serialNo" prefWidth="61.0" text="SNO" />
+          <TableColumn fx:id="description" prefWidth="178.0" text="Description" />
+            <TableColumn fx:id="partNo" prefWidth="93.0" text="PartNo" />
+            <TableColumn fx:id="partyName" prefWidth="161.0" text="PartyName" />
+            <TableColumn fx:id="quantityDemanded" prefWidth="136.0" text="QtyDemanded" />
+            <TableColumn fx:id="quantityDelivered" prefWidth="138.0" text="QtyDelivered" />
+            <TableColumn fx:id="Balance" minWidth="0.0" prefWidth="129.0" text="Balance" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="image_logo" fitHeight="156.0" fitWidth="688.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true">
+         <image>
+            <Image url="@logo.png" />
+         </image></ImageView>
+      <DatePicker fx:id="Date_c" layoutX="709.0" layoutY="80.0" prefHeight="32.0" prefWidth="174.0" promptText="Date" />
+   </children>
+</AnchorPane>
